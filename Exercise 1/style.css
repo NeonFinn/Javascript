@@ -1,0 +1,36 @@
+body {
+background-color: #f0f0f0;
+font-family: Arial, sans-serif;
+}
+
+h1 {
+text-align: center;
+margin: 0;
+padding: 20px;
+}
+
+
+/* put p on left */
+p {
+width: 75%;
+float: left;
+padding: 20px;
+margin: 0;
+}
+
+/* put div below */
+#favorite {
+width: 50%;
+float: left;
+padding: 0px;
+margin: 0;
+}
+
+/* make image have black border centered */
+img {
+border: 2px solid black;
+border-radius: 5px;
+display: block;
+margin: 0 auto;
+
+}

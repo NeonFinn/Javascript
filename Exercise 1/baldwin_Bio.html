@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Student Bio</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+
+<h1>Finn Baldwin</h1>
+
+<p>
+    I am a 17 year old High School student taking CCP classes here at Columbus State. I am a senior at Whitehall Yearling
+    High school and I am in the band. I play the clarinet during marching band and Bassoon during concert band. I am also a
+    3rd degree black belt in Taekwondo. I have been doing Taekwondo for 8 years and I am currently a student instructor.
+</p>
+
+<div id="favorite">
+    <ol>
+        <li>Conan Gray</li>
+        <li>Queen</li>
+        <li>Paul Anka</li>
+        <li>Laufey</li>
+        <li>Frank Sinatra</li>
+    </ol>
+</div>
+
+<img src = "images/Finn.jpg" alt="Finn Baldwin" width="300" height="400">
+
+<!-- add alert when click on image -->
+<script>
+    const image = document.querySelector('img');
+    image.addEventListener('click', function() {
+        window.alert("This is a picture of me :)");
+    });
+</script>
+
+<!-- add text dynamically to the page after cliocking -->
+<script>
+    const image = document.querySelector('img');
+    image.addEventListener('click', function() {
+        document.write("<p>Thanks for viewing. Do not forget about HTML coding.</p>");
+    });
+</script>
+
+</body>
+</html>
+
+
