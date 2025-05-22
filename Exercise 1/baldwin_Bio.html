@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" >
 </head>
-<body>
 
 <h1>Finn Baldwin</h1>
 
@@ -27,19 +26,21 @@
 
 <img src = "images/Finn.jpg" alt="Finn Baldwin" width="300" height="400">
 
+<!-- function to add text to the page after clicking -->
+<script>
+    function addText() {
+        const message = document.createElement("h5");
+        message.textContent = "Thanks for viewing.";
+        document.body.appendChild(message);
+    }
+</script>
+
 <!-- add alert when click on image -->
 <script>
     const image = document.querySelector('img');
     image.addEventListener('click', function() {
         window.alert("This is a picture of me :)");
-    });
-</script>
-
-<!-- add text dynamically to the page after cliocking -->
-<script>
-    const image = document.querySelector('img');
-    image.addEventListener('click', function() {
-        document.write("<p>Thanks for viewing. Do not forget about HTML coding.</p>");
+        addText();
     });
 </script>
 
