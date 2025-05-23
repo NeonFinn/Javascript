@@ -18,6 +18,11 @@ padding: 20px;
 margin: 0;
 }
 
+h3 {
+padding-left: 20px;
+margin-bottom: 0;
+}
+
 /* put div below paragraph */
 #favorite {
 width: 50%;
