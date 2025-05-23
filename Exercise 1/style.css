@@ -10,7 +10,7 @@ padding: 20px;
 }
 
 
-/* put p on left */
+/* put paragraph on left */
 p {
 width: 75%;
 float: left;
@@ -18,7 +18,7 @@ padding: 20px;
 margin: 0;
 }
 
-/* put div below */
+/* put div below paragraph */
 #favorite {
 width: 50%;
 float: left;
@@ -26,15 +26,10 @@ padding: 0px;
 margin: 0;
 }
 
-/* make image have black border centered */
+/* make image have black border and centered in remaining space */
 img {
 border: 2px solid black;
 border-radius: 5px;
 display: block;
 margin: 0 auto;
-}
-
-h5 {
-text-align: right;
-padding-right: 150px;
 }

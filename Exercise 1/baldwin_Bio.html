@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <title>Student Bio</title>
     <meta charset="utf-8">
@@ -9,9 +10,9 @@
 <h1>Finn Baldwin</h1>
 
 <p>
-    I am a 17 year old High School student taking CCP classes here at Columbus State. I am a senior at Whitehall Yearling
-    High school and I am in the band. I play the clarinet during marching band and Bassoon during concert band. I am also a
-    3rd degree black belt in Taekwondo. I have been doing Taekwondo for 8 years and I am currently a student instructor.
+    I am 17 and a High School student taking CCP classes here at Columbus State. I am a senior at Whitehall Yearling
+    High school, and I am in the band. I play the clarinet during marching band and Bassoon during concert band. I am also a
+    3rd degree black belt in Taekwondo. I have been doing Taekwondo for 8 years, and I am currently a student instructor.
 </p>
 
 <div id="favorite">
@@ -24,22 +25,21 @@
     </ol>
 </div>
 
-<img src = "images/Finn.jpg" alt="Finn Baldwin" width="300" height="400">
+<div id="me">
+    <img src = "images/Finn.jpg" alt="Finn Baldwin" width="300" height="400">
+</div>
 
-<!-- function to add text to the page after clicking -->
+<!-- function to thank user for clicking on image -->
 <script>
     function addText() {
-        const message = document.createElement("h5");
-        message.textContent = "Thanks for viewing.";
-        document.body.appendChild(message);
+        document.write("<h2>Thanks for viewing.</h2>");
     }
 </script>
 
 <!-- add alert when click on image -->
 <script>
-    const image = document.querySelector('img');
-    image.addEventListener('click', function() {
-        window.alert("This is a picture of me :)");
+    document.getElementById('me').addEventListener('click', function() {
+        alert("This is a picture of me :)");
         addText();
     });
 </script>
