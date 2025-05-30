@@ -40,7 +40,10 @@
 <!-- function to thank user for clicking on image -->
 <script>
     function addText() {
-        document.write("<h2>Thanks for viewing.</h2>");
+        const meDiv = document.getElementById('me');
+        const p = document.createElement('p');
+        p.textContent = "Thanks for viewing!";
+        meDiv.appendChild(p);
     }
 </script>
 
