@@ -30,7 +30,13 @@
 	
 <script> 
 	window.addEventListener('load', (event) =>{
-			
+
+	let fahrenheit = Number(prompt("What is the temperature in degrees Fahrenheit?"));
+
+	celsius = (fahrenheit - 32) * 5/9;
+
+	alert("The temperature in Celsius is " + celsius.toFixed(2) + " degrees.");
+
      });
 	 
 </script> 
