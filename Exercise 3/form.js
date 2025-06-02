@@ -1,5 +1,3 @@
-
-
 window.addEventListener('load', (event) =>{
 
 let x = document.querySelector('h2');
