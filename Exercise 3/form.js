@@ -2,8 +2,9 @@
 
 window.addEventListener('load', (event) =>{
 
-let x = getElementById("wrapper");
-console.log(x.firstElementChild);
+let x = document.getElementById("wrapper");
+let y = x.nextElementSibling;
+console.log(y)
 		
     
     
