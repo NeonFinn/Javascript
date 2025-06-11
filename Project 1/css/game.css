@@ -1,0 +1,62 @@
+/* CSS Document */
+
+html, body {
+	margin: 0 auto;
+	font-family: comic sans ms;
+	font-size: 13px;
+	background-image: url('../img/background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+	
+h1 {
+	margin: 2px;
+}
+	
+button {
+    padding: 8px;
+   }
+
+#content {
+	padding: 20px;
+	display:flex;
+    flex-wrap:wrap;
+}
+	
+
+#gamespace {
+	margin: 20px;
+    height: 350px;
+    width: 600px;
+	background-color: rgba(255, 253, 208, 0.6);
+	border: 2px solid #CCC;
+	margin-left: 10%;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.pizza {
+    width: 600px;
+    margin-top: 25px;
+}
+
+
+.col1{
+    text-align: center;
+    width: 550px;
+    min-width: 400px;
+    background-color: rgba(255, 253, 208, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+@media only screen and (max-width: 900px){
+    #content{
+        display: inline-block;
+    }
+    .col1{
+        margin:0 auto;
+    }
+}
