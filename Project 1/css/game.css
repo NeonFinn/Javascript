@@ -4,14 +4,14 @@ html, body {
 	margin: 0 auto;
 	font-family: comic sans ms;
 	font-size: 13px;
-	background-image: url('../img/background.jpg');
+	background-image: url('../img/background.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 
 }
 	
 h1 {
-	margin: 2px;
+	margin: 2px;Finn
 }
 	
 button {
@@ -59,4 +59,3 @@ button {
     .col1{
         margin:0 auto;
     }
-}
