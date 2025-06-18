@@ -1,7 +1,7 @@
 window.addEventListener('load', (event) =>{
 
 const restaurants = ["Rally's", "Subway", "Panda Express", "Chipotle", "Massey's Pizza"];
-fav = prompt("Enter your favorite restaurant");
+let fav = prompt("Enter your favorite restaurant");
 
 restaurants.push(fav);
 
