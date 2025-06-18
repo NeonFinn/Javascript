@@ -3,7 +3,7 @@
 html, body {
 	margin: 0 auto;
 	font-family: comic sans ms;
-	font-size: 13px;
+	font-size: 18px;
 	background-image: url('../img/background.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -11,7 +11,18 @@ html, body {
 }
 	
 h1 {
-	margin: 2px;Finn
+    color: #B21414;
+	margin: 2px;
+	font-family: "Joti One", serif;
+	font-size: 40px;
+	text-shadow: 4px 4px #000;
+}
+
+#score{
+    color: #B21414;
+    text-shadow: 2px 2px #000;
+    font-family: "Joti One", serif;
+    font-size: 30px;
 }
 	
 button {
@@ -37,8 +48,7 @@ button {
 }
 
 .pizza {
-    width: 600px;
-    margin-top: 25px;
+    width: 120px;
 }
 
 
