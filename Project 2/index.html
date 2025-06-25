@@ -1,0 +1,94 @@
+<!-- 
+		Name: Finn Baldwin
+		Date: 06/11/25
+		Class: CSCI2447, Javascript Fundamentals
+		Project 1
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Pizza Game</title>
+    <link href="css/game.css" rel="stylesheet" />
+    <meta charset ="utf-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+
+  </head>
+  <body>
+
+   <div id="wrapper">
+	<div id="content">
+        <div id="leftside" class="col1">
+            <h1>Pepperoni Picker</h1>
+
+            <p id="directions">You own Pizza Palace, and your new employee made a pepperoni pizza. The only
+            problem is that the customer wanted a cheese pizza! You need to pick off all the pepperoni before it gets
+            to the customer.</p>
+
+            <p id="usergreeting"> </p>
+
+            <p><span id="score">0 pts</span></p>
+
+            <div class="timer">30 seconds left</div>
+
+            <button type="button" id="start_button">Start!</button>
+
+        </div>
+
+		<div id="gamespace">
+
+		</div>
+
+	</div>
+
+</div>
+  <script>
+      let gamerName = "";
+      gamerName = prompt("What is your name?");
+
+      document.getElementById("usergreeting").textContent = (`Hurry and fix the pizza ${gamerName}! You have 30 seconds
+      before the customer picks it up!`);
+
+      let score = 0;
+      function randomX() {
+            let screenWidth = $("#gamespace").width();
+            return Math.floor(Math.random() * screenWidth);
+      }
+
+      function randomY() {
+            let screenHeight = $("#gamespace").height();
+            return Math.floor(Math.random() * screenHeight);
+      }
+
+      $(document).ready(function() {
+            $("#gamespace").append("<img src='img/cheese.png' class='pizza' alt='Pizza'>");
+
+            $(".timer").show();
+
+            alert(randomX());
+            alert(randomY());
+
+            $("#start_button").click(function() {
+                  alert("Game started!");
+            });
+
+            $("#start_button").css({
+                backgroundColor: "#fae7ad",
+                color: "black",
+                border: "2px solid #f0c36d",
+                borderRadius: "5px",
+                padding: "10px 10px",
+                fontSize: "18px",
+                fontFamily: "comic sans ms"
+            });
+
+      });
+  </script>
+
+  </body>
+</html>
