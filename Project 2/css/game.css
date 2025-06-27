@@ -16,15 +16,28 @@ h1 {
 }
 
 #score{
+    flex: 1;
+    text-align: left;
     color: #B21414;
-    text-shadow: 4px 4px #000;
+    text-shadow: 2px 2px #000;
     font-family: "Joti One", serif;
-    font-size: 50px;
+    font-size: 30px;
 }
 
-button {
+.timer {
+    flex: 1;
+    text-align: right;
+    display: none;
+    font-family: 'Joti One', serif;
+    color: #B21414;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #000;
+}
+
+.button {
     padding: 8px;
-   }
+}
 
 #content {
 	padding: 20px;
@@ -48,13 +61,9 @@ button {
     width: 120px;
 }
 
-.timer {
-  display: none;
-  font-family: 'Joti One', serif;
-  color: #B21414;
-  font-size: 20px;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px #000;
+div.controls {
+    display: flex;
+    margin-bottom: 20px;
 }
 
 .col1{
