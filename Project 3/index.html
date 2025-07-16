@@ -1,4 +1,4 @@
-<!-- 
+<!--
 		Name: Finn Baldwin
 		Date: 06/11/25
 		Class: CSCI2447, Javascript Fundamentals
@@ -88,7 +88,17 @@
       }
 
       function addImage() {
-            $("#gamespace").append("<img src='img/cheese.png' class='pizza' alt='Cheese Pizza'>");
+            let x = randomX();
+            let y = randomY();
+
+            let img = $("<img src='img/cheese.png' class='pizza' alt='Cheese Pizza'>");
+            img.css({
+                position: "absolute",
+                top: y + "px",
+                left: x + "px",
+                width: "50px"
+            });
+            $("#gamespace").append(img);
       }
 
       $(document).ready(function() {
@@ -104,6 +114,11 @@
                 padding: "10px 10px",
                 fontSize: "18px",
                 fontFamily: "Comic Sans MS"
+            });
+
+            $("#gamespace").on("click", ".pizza", function() {
+                $(this).remove();
+                increaseScore();
             });
 
       });

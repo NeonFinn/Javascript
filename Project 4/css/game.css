@@ -55,7 +55,8 @@ h1 {
     border-radius: 10px;
     padding: 20px;
     font-family: 'Joti One', serif;
-    position: relative
+    position: relative;
+    cursor: url('../img/cursor.png'), auto;
 }
 
 .pizza {
