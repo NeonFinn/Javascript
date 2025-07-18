@@ -39,10 +39,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('#tipLinks a').click(function(event) {
-            event.preventDefault();
-            var pageURL = $(this).attr('href');
-            $('#tips').load(pageURL + ' #newTips');
+        $('#tipLinks a').click(function(event) { // When tip link clicked:
+            event.preventDefault();  // Stop regular link action
+            var pageURL = $(this).attr('href'); // Get URL
+            $('#tips').load(pageURL + ' #newTips'); // Load #newTips from URL into #tips
         });
     });
 </script>
