@@ -1,0 +1,16 @@
+        <form>
+               <div class="wrap-input100" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="email" placeholder="EMAIL" />
+						
+						
+					</div>
+				<div class="wrap-input100" data-validate="Password is required">
+						<input class="input100" type="password" name="pass" placeholder="PASSWORD" />
+						
+						
+					</div>
+        
+                <p class="button">
+                    <input type="submit" name="button" id="button" value="Login" />
+                </p>
+	</form>  
