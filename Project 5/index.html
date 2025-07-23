@@ -1,0 +1,142 @@
+<!--
+		Name: Finn Baldwin
+		Date: 06/11/25
+		Class: CSCI2447, Javascript Fundamentals
+		Project 1
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Pizza Game</title>
+    <link href="css/game.css" rel="stylesheet" />
+    <meta charset ="utf-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <script src="jquery-3.7.1.min.js"></script>
+
+  </head>
+  <body>
+
+   <div id="wrapper">
+	<div id="content">
+        <div id="leftside" class="col1">
+            <h1>Pepperoni Picker</h1>
+
+            <p id="directions">You own Pizza Palace, and your new employee made a pepperoni pizza. The only
+            problem is that the customer wanted a cheese pizza! You need to pick off all the pepperoni before it gets
+            to the customer.</p>
+
+            <p id="usergreeting"> </p>
+
+            <div class="controls">
+                    <span id="score">0 pts</span>
+                <div class="timer">30 seconds left</div>
+            </div>
+
+            <button type="button" id="start_button">Start!</button>
+
+        </div>
+
+		<div id="gamespace"></div>
+
+	</div>
+
+</div>
+  <script>
+      let gamerName = "";
+      let score = 0;
+      let secondsLeft = 30;
+      let timerInterval = null;
+      let imageInterval = null;
+
+      gamerName = prompt("What is your name?");
+
+      document.getElementById("usergreeting").textContent = (`Hurry and fix the pizza ${gamerName}! You have 30 seconds before the customer picks it up!`);
+
+      function randomX() {
+          let screenWidth = $("#gamespace").width() - 120;
+          return Math.floor(Math.random() * screenWidth);
+      }
+
+      function randomY() {
+          let screenHeight = $("#gamespace").height() - 120;
+          return Math.floor(Math.random() * screenHeight);
+      }
+
+      function increaseScore() {
+          score += 1;
+          document.getElementById("score").textContent = `${score} pts`;
+      }
+
+      function updateTimer() {
+          if (secondsLeft > 0) {
+              secondsLeft -= 1;
+              $(".timer").text(`${secondsLeft} seconds left`);
+
+          } else {
+              clearInterval(timerInterval);
+              clearInterval(imageInterval);
+              $(".timer").text("Time's up!");
+              $("#start_button").prop("disabled", false);
+          }
+      }
+
+      function addImage() {
+          let x = randomX();
+          let y = randomY();
+
+        let img = $(`<img src='img/pepperoni.png' class='pizza' alt='Pepperoni Piece' style='position:absolute; width:120px; left:${x}px; top:${y}px;'>`);
+          $("#gamespace").append(img);
+      }
+
+      function start() {
+          clearInterval(timerInterval);
+          clearInterval(imageInterval);
+
+          score = 0;
+          secondsLeft = 30;
+          $("#score").text(`${score} pts`);
+          $(".timer").text(`${secondsLeft} seconds left`).show();
+          $("#gamespace").empty();
+          $("#start_button").prop("disabled", true);
+
+          timerInterval = setInterval(updateTimer, 1000);
+
+          (function spawn() {
+               addImage();
+               if (secondsLeft > 0) {
+                    let delay = Math.floor(Math.random() * 2000);
+                    imageInterval = setTimeout(spawn, delay);
+               }
+          })();
+      }
+
+      $(document).ready(function() {
+          $("#start_button").click(function() {
+              start();
+          });
+
+          $("#start_button").css({
+              backgroundColor: "#fae7ad",
+              color: "black",
+              border: "2px solid #f0c36d",
+              borderRadius: "5px",
+              padding: "10px 10px",
+              fontSize: "18px",
+              fontFamily: "Comic Sans MS"
+          });
+
+          $("#gamespace").on("click", ".pizza", function() {
+              $(this).remove();
+              increaseScore();
+          });
+      });
+  </script>
+
+  </body>
+</html>
