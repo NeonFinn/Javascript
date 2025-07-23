@@ -82,7 +82,7 @@
               clearInterval(timerInterval);
               clearInterval(imageInterval);
               $(".timer").text("Time's up!");
-              $("#start_button").prop("disabled", false);
+              $("#start_button").prop("disabled", false).on("click", start);
           }
       }
 
@@ -103,7 +103,7 @@
           $("#score").text(`${score} pts`);
           $(".timer").text(`${secondsLeft} seconds left`).show();
           $("#gamespace").empty();
-          $("#start_button").prop("disabled", true);
+          $("#start_button").prop("disabled", true).off("click");
 
           timerInterval = setInterval(updateTimer, 1000);
 
@@ -118,9 +118,7 @@
 
       $(document).ready(function() {
       $("footer").load("load.html");
-          $("#start_button").click(function() {
-              start();
-          });
+          $("#start_button").on("click", start);
 
           $("#start_button").css({
               backgroundColor: "#fae7ad",
