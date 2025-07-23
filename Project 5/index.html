@@ -80,7 +80,7 @@
 
           } else {
               clearInterval(timerInterval);
-              clearInterval(imageInterval);
+              clearTimeout(imageInterval);
               $(".timer").text("Time's up!");
               $("#start_button").prop("disabled", false).on("click", start);
           }
@@ -96,7 +96,7 @@
 
       function start() {
           clearInterval(timerInterval);
-          clearInterval(imageInterval);
+          clearTimeout(imageInterval);
 
           score = 0;
           secondsLeft = 30;
