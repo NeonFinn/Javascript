@@ -1,0 +1,97 @@
+html, body {
+	margin: 0 auto;
+	font-family: comic sans ms;
+	font-size: 18px;
+	background-image: url('../img/background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h1 {
+    color: #B21414;
+	margin: 2px;
+	font-family: "Joti One", serif;
+	font-size: 40px;
+	text-shadow: 4px 4px #000;
+}
+
+#score{
+    flex: 1;
+    text-align: left;
+    color: #B21414;
+    text-shadow: 2px 2px #000;
+    font-family: "Joti One", serif;
+    font-size: 30px;
+}
+
+.timer {
+    flex: 1;
+    text-align: right;
+    display: none;
+    font-family: 'Joti One', serif;
+    color: #B21414;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #000;
+}
+
+.button {
+    padding: 8px;
+}
+
+#content {
+	padding: 20px;
+	display:flex;
+    flex-wrap:wrap;
+}
+
+#gamespace {
+    margin: 20px;
+    height: 350px;
+    width: 600px;
+    background-color: rgba(255, 253, 208, 0.6);
+    border: 6px groove #B21414;
+    margin-left: 10%;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Joti One', serif;
+    position: relative;
+    cursor: url('../img/cursor.png'), auto;
+}
+
+.pizza {
+    width: 120px;
+    position: absolute;
+}
+
+div.controls {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.col1{
+    text-align: center;
+    width: 550px;
+    min-width: 400px;
+    background-color: rgba(255, 253, 208, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    border: 6px groove #B21414;
+}
+
+@media only screen and (max-width: 900px) {
+    #content {
+        display: inline-block;
+    }
+
+    .col1 {
+        margin: 0 auto;
+    }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 5px 15px;
+}
